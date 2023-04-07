@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yz.mytextinputlayout.app.activities.MainActivity"
+    android:id="@+id/main_activity_layout"
+    android:orientation="vertical">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:visibility="gone"
+        android:padding="5dp"
+        tools:listitem="@layout/item_happy_place_card_view"
+        />
+    <TextView
+        android:id="@+id/no_happy_places_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/note_no_happy_places"
+        android:gravity="center"
+        android:textSize="@dimen/no_records_available_text_size"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_baseline_add_24"
+        app:backgroundTint="@color/colorPrimary"
+        android:tint="@color/white"
+        app:rippleColor="@color/colorPrimaryDark" />
+
+</FrameLayout>
